@@ -1,0 +1,12 @@
+parameters:
+  nsgDefs:
+    - name: TEMPLATE_VALUE
+      securityRules:
+    # INBOUND ============================================================
+      - name: Deny-VirtualNetwork-Any-Inbound
+        properties:
+          direction: inbound
+          priority: "4094"
+          protocol: "*"
+          sourcePortRange: "*"
+          destinationPortRange: "*"
